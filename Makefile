@@ -28,6 +28,7 @@ COM =\
 	components/user\
 	components/volume\
 	components/wifi
+PREFIX = ~/.local
 
 all: slstatus
 
