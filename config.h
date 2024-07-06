@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 3000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -67,6 +67,7 @@ static const struct arg args[] = {
     /* function format          argument */
     {uptime, "^c#d9dbda^ up %s ", NULL},
     {temp, "[^c#fab387^%sC^d^]", "/sys/class/thermal/thermal_zone0/temp"},
+    {gpu_temp, "[^c#76b900^%sC^d^]", NULL},
     {cpu_freq, "^c#89b4fa^ cpu %s ", NULL},
     {ram_used, "^c#74c7ec^mem %s", NULL},
     {separator, "^c#d5d5bb^/", NULL},
