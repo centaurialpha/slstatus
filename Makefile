@@ -25,6 +25,7 @@ COM =\
 	components/separator\
 	components/swap\
 	components/temperature\
+	components/gpu\
 	components/uptime\
 	components/user\
 	components/volume\
