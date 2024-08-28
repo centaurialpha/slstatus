@@ -15,6 +15,5 @@ const char *gpu_temp(const char *unused) {
 
   result = run_command(cmd);
   temp = atoi(result);
-
   return bprintf("%ju", temp);
 }

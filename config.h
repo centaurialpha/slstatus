@@ -66,8 +66,11 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
     /* function format          argument */
     {uptime, "^c#d9dbda^ up %s ", NULL},
+    {battery_perc, "^c#ff00ff^ BAT0 %s\% ^d^", "BAT0"},
     {temp, "[^c#fab387^%sC^d^]", "/sys/class/thermal/thermal_zone0/temp"},
-    {gpu_temp, "[^c#76b900^%sC^d^]", NULL},
+    #if INCLUDE_GPU_TEMP
+        {gpu_temp, "[^c#76b900^%sC^d^]", NULL},
+    #endif
     {cpu_freq, "^c#89b4fa^ cpu %s ", NULL},
     {ram_used, "^c#74c7ec^mem %s", NULL},
     {separator, "^c#d5d5bb^/", NULL},
